@@ -1,11 +1,12 @@
 import express from 'express';
+import { academicSemesterRoute } from '../modules/academicSemesters/academicSemester.route';
 
 const router = express.Router();
 
 const moduleRoutes = [
   {
-    path: '',
-    routes: ""
+    path: '/academic-semesters',
+    routes: academicSemesterRoute
   }
 ];
 
