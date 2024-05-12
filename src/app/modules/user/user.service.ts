@@ -4,7 +4,7 @@ import { RedisClient } from '../../../shared/redis';
 import { AuthService, CoreService } from '../../../shared/axios';
 
 const createUser = async (req: Request): Promise<any> => {
-  const fileUpload = await FileUploadHelper.uploadToCloudinary(req.file);
+  const fileUpload: any = await FileUploadHelper.uploadToCloudinary(req.file);
   const payload = req.body.student;
   if (fileUpload) {
     payload.profileImage = fileUpload.secure_url;
